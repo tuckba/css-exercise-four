@@ -1,4 +1,75 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: #dadada;
   font-size: 10px;
+   }
+
+.container {
+    margin: 20px auto;
+    width: 90%;
+}
+
+
+/* On screens that are 575px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 575px) {
+    .container {
+        width: 100%;
+    }
+
+/* On screens that are 575px or more, go from one column to two columns*/
+@media screen and (min-width: 575px) and (max-width 990px) {
+   .container {
+        width: 50%;
+    }    
+}
+    
+/* On screens that are 991px or more, create four equal columns that float next to each other*/
+@media screen and (min-width: 991px){
+   .container {
+         float: left;
+         width: 25%;
+         padding: 20px;
+    }    
+}
+
+ 
+/* Modern Luxury Travel text*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.emphasis {
+    font-family: 'Roboto+Mono', monospace;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.preview.baku {  
+.   background-image: url(images/baku.jpg);
+    background-size: contain;
+}
+
+.preview.london {
+    background-image: url(images/london.jpg);
+    background-size: contain;
+}
+
+.preview.madrid {
+    background-image: url(images/madrid.jpg);
+    background-size: contain;
+}
+
+.preview.rome {
+    background-image: url(images/rome.jpg);
+    background-size: contain;
+
 }
