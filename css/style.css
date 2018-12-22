@@ -3,27 +3,21 @@
 }
 
 body {
- background-image: url("images/baku.jpg"), url("images/london.png"), url("images/madrid.jpg"), url("images/rome.jpg");
-   
-  background-repeat: no-repeat;
-  background-color: #dadada;
-  display: inline-block;
+background-color: lightgray;
    }
 
-container {
-    margin: auto;
-    width: 60%;
+.container {
+  margin: auto;
+  width: 100%;
 }
 
 
 h1 {
     font-family:  serif;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 400;
-    display: inline-block;
-    position: absolute;
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-top: 25px;
+    margin-left: 20px;
 }
 
 
@@ -31,62 +25,51 @@ h1 {
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 .emphasis {
-    display: block;
+    display: inline-block;
     font-family: 'Roboto+Mono', monospace;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 300;
     margin: auto;
-    position: relative;
 }
 
 .preview {
+    margin: auto;
+    height: 200px;
     display: inline-block;
-    height: auto;
-    padding-top: 20px;
+    width: 100%;
+    background-position: center; 
+    background-size: cover;
 }
 
 .preview.baku {  
-    display: inline-block;
-    
-    background-size: cover;
-    height: 200px;
+    background-image: url("../images/baku.jpg");  
 }
 
 .preview.london {
-    display: inline-block;
-    
-    background-size: cover;
-    height: 200px;
+    background-image: url("../images/london.png");
 }
 
 .preview.madrid {
-    display: inline-block;
-       
-    background-size: cover;
-    height: 200px;
+    background-image: url("../images/madrid.jpg");
 }
 
 .preview.rome {
-    display: inline-block;
-    background-size: cover;
-    height: 200px;
+    background-image: url("../images/rome.jpg");
 }
 
 /* On screens that are 575px wide or less, make the columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 575px) {
+@media screen and (min-width: 375px) and (max-width: 575px){
   .preview {
-        margin: auto;
+        margin: 1%;
         width: 100%;
-        display: block;
     }
 }
 
-/* On screens that are 575px or more, go from one column to two columns*/
-@media screen and (min-width: 575px) and (max-width: 990px) {
+/*On screens that are 576px or more, go from one column to two columns*/
+@media screen and (min-width: 576px) and (max-width: 990px) {
   .preview {
         margin: auto;
         width: 48%;
-        display: block;
     }    
 }
     
@@ -95,6 +78,5 @@ h1 {
    .preview {
          margin: auto;
          width: 20%;
-         display: block;
     }    
 }
