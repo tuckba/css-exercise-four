@@ -2,70 +2,80 @@
   box-sizing: border-box;
 }
 
-
 body {
-
+ background-image: url("images/baku.jpg"), url("images/london.png"), url("images/madrid.jpg"), url("images/rome.jpg");
+   
+  background-repeat: no-repeat;
   background-color: #dadada;
-  font-size: 10px;
-  display: block;
-
+  display: inline-block;
    }
 
-/* Modern Luxury Travel text*/
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-
-.emphasis {
-
-    font-family: 'Roboto+Mono', monospace;
-    font-size: 50px;
-    font-weight: 300;
-    display: inline;
-    position: relative;
+container {
+    margin: auto;
+    width: 60%;
 }
+
 
 h1 {
     font-family:  serif;
     font-size: 40px;
     font-weight: 400;
-    display: block;
+    display: inline-block;
     position: absolute;
     margin-top: 30px;
     margin-left: 30px;
 }
 
 
-.preview {
+/* Modern Luxury Travel text*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.emphasis {
     display: block;
-    width: 375px;
+    font-family: 'Roboto+Mono', monospace;
+    font-size: 50px;
+    font-weight: 300;
+    margin: auto;
+    position: relative;
+}
+
+.preview {
+    display: inline-block;
     height: auto;
     padding-top: 20px;
 }
 
 .preview.baku {  
-    background-image: url(images/baku.jpg);
-    background-size: contain;
+    display: inline-block;
     
+    background-size: cover;
+    height: 200px;
 }
 
 .preview.london {
-    background-image: url(images/london.png);
-    background-size: contain;
+    display: inline-block;
+    
+    background-size: cover;
+    height: 200px;
 }
 
 .preview.madrid {
-    background-image: url(images/madrid.jpg);    
-    background-size: contain; 
+    display: inline-block;
+       
+    background-size: cover;
+    height: 200px;
 }
 
 .preview.rome {
-    background-image: url(images/rome.jpg);
-    background-size: contain;
+    display: inline-block;
+    background-size: cover;
+    height: 200px;
 }
 
 /* On screens that are 575px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 575px) {
-    preview {
-        margin: 1%;
+  .preview {
+        margin: auto;
         width: 100%;
         display: block;
     }
@@ -73,8 +83,8 @@ h1 {
 
 /* On screens that are 575px or more, go from one column to two columns*/
 @media screen and (min-width: 575px) and (max-width: 990px) {
-  preview {
-        margin: 1%;
+  .preview {
+        margin: auto;
         width: 48%;
         display: block;
     }    
@@ -82,8 +92,8 @@ h1 {
     
 /* On screens that are 991px or more, create four equal columns that float next to each other*/
 @media screen and (min-width: 991px){
-   preview {
-         margin: 1%;
+   .preview {
+         margin: auto;
          width: 20%;
          display: block;
     }    
